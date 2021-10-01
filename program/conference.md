@@ -4,6 +4,7 @@ title: Conference program
 
 <div class="keynote-full">
 
+{% if site.data.conference[0].name %}
 	<ul>
 	{% for speaker in site.data.conference %}
 		{% if speaker.name %}
@@ -29,4 +30,7 @@ title: Conference program
 		{% endif %}
 	{% endfor %}
 	</ul>
+{% else %}
+  <p>TBD</p>
+{% endif %}
 </div>
